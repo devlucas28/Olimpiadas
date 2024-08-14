@@ -1,0 +1,483 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+    padding: 0.4rem 0;
+    z-index: 10;
+}
+
+
+.cabeçalho {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.menu1,
+.menu2,
+.menu3 {
+    padding: 1%;
+}
+
+.menu1-2,
+.menu2-2,
+.menu3-2 {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+
+}
+
+.medalhas:hover {
+    color: #009739;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.home:hover {
+    color: #009739;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+}
+
+.patrocinio:hover {
+    color: #009739;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+main {
+    margin-top: 50px;
+    background-color: black;
+    margin-bottom: 15%;
+
+}
+
+.header2 {
+    display: flex;
+    width: 100%;
+}
+
+figure {
+    justify-content: center;
+    margin: auto;
+
+}
+
+.banner:hover {
+    content: url(../img/atletabs.jpg);
+    object-fit: scale-down;/* define como o conteúdo de um contêiner substituível, como uma imagem, deve ser redimensionado para caber no contêiner. */
+
+}
+
+article {
+    width: 100%;
+}
+
+.titulotexto {
+    color: white;
+    text-align: center;
+    padding: 4% 3% 2% 3%;
+    font-size: 1.8rem;
+    margin: auto;
+}
+
+.biografia {
+    color: white;
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: auto;
+    padding: 3% 10%;
+
+
+}
+
+.fotos {
+    width: 100%;
+    height: 700px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* define que qualquer conteúdo que ultrapasse os limites do container não será exibido. */
+}
+
+.fotoluta {
+    position: absolute;
+    width: auto; 
+    height: 80%; 
+    margin: 1%;
+    object-fit: cover;/* define como o conteúdo de um contêiner substituível, como uma imagem, deve ser redimensionado para caber no contêiner. */
+    opacity: 0; /* define a opacidade inicial da imagem como 0, tornando-a invisível. */
+    animation: SequenciaLuta 12s infinite;
+    
+    
+}
+
+/* nth-child() pseudo-classe, é usado para selecionar um ou mais elementos baseados na sua posição dentro do pai (container). O número entre parênteses indica a ordem do elemento. */
+.fotoluta:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.fotoluta:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.fotoluta:nth-child(3) {
+    animation-delay: 8s;
+}
+
+
+/* @keyframes é uma regra CSS usada para definir a sequência de etapas de uma animação. Ela permite criar animações que mudam gradualmente de um conjunto de estilos CSS para outro. */
+@keyframes SequenciaLuta {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 5px 0;
+    font-size: 12px;
+
+}
+
+.redesocial {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+    justify-content: center;
+
+}
+
+.logoinsta {
+    display: flex;
+    padding-left: 0.4rem;
+}
+
+/* MEDALHAS */
+
+.bannermedalha {
+    margin-top: 3%;
+}
+
+.quadrodemedalhas {
+    color: white;
+    text-align: center;
+    padding: 2%;
+    font-size: 2.5rem;
+    margin-top: 5%;
+
+}
+
+.tabelamedalhas {
+    display: flex;
+    width: 100%;
+}
+
+table {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border: #009739 solid 1px;
+
+}
+
+th {
+    color: white;
+    border: 0.1rem solid white;
+    padding: 2%;
+    font-size: 1.5rem;
+
+
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+
+    color: white;
+    border: 0.1rem solid white;
+    font-size: 1.3rem;
+    padding: 1%;
+    width: 50%;
+}
+
+.logomedalha {
+    width: 15%;
+    align-items: center;
+}
+
+
+
+
+/* PATROCÍNIO */
+
+.patrocinador {
+    color: white;
+    margin-top: 10%;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 2%;
+}
+
+h2 {
+    color: white;
+    margin-top: 5%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 2%;
+}
+
+.textopatrocinio {
+    color: white;
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: auto;
+    padding: 3% 10%;
+}
+
+.frase {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    padding: 3% 10%;
+    margin-bottom: 5%;
+}
+
+section {
+    width: 100%;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+
+}
+
+input {
+    margin-bottom: 2%;
+}
+
+fieldset{
+    align-items: center;
+    width: 50%;
+    color: black;
+    background-image: url(../img/beatriz-campea.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+
+.Detalhes, .tipo-patrocinio, .comentarios{
+    margin: 1% 0 2% 0;
+    color: aliceblue;
+    font-size: 1.1rem;
+    
+
+}
+
+.formulario{
+    border-radius: 5%;
+    align-items: center;    
+}
+
+.titulo{
+    display: flex;
+    margin: 3% 17%;
+    padding-bottom: 1%;
+    color: aliceblue;
+    font-size: 1.6rem;
+}
+
+.nome-da-empresa, .nome-representante, .email, .telefone{
+    display: flex;
+    padding-bottom: 1%;
+    color: aliceblue;
+    font-size: 1.1rem;
+}
+
+.botao{
+    display:flex;
+    background-color: green;
+    color:yellow;
+    margin: auto;
+}
+
+.geral{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    background-color: b
+}
+.apoio{ color: aliceblue;}
+
+textarea{
+    margin-bottom: 2%;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /* Home */
+
+    a {
+        font-size: 1.2rem;
+    }
+
+    .cabeçalho {
+        display: inline-flex;
+
+    }
+
+    .bandeira,
+    .olimpiadas {
+        display: none;
+    }
+
+    .menu1,
+    .menu2,
+    .menu3 {
+        display: none;
+    }
+
+    .menu1-2,
+    .menu2-2,
+    .menu3-2 {
+        display: flex;
+
+    }
+
+    .menu3-2:hover {
+        zoom: 125%;
+    }
+
+    .menu1-2:hover {
+        zoom: 125%;
+    }
+
+    .menu2-2:hover {
+        zoom: 125%;
+    }
+
+    .fotos{
+        height: 400px;
+    }
+
+    .redesocial {
+        width: 100%;
+        color: white;
+        font-size: 1.2rem;
+        justify-content: center;
+
+    }
+
+    .logoinsta {
+        display: flex;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding-left: 0.7rem;
+        padding-bottom: 0.4rem;
+    }
+
+    /* MEDALHAS */
+
+    .quadrodemedalhas {
+        font-size: 1.8rem;
+        margin-top: 6%;
+    }
+
+    .bannermedalha {
+        margin-top: 10%;
+        content: url(../img/fotomedalha.jpg);
+        width: 100%;
+    }
+    
+    table{
+        overflow: auto;
+    }
+
+    th {
+        font-size: 1rem;
+        padding: 3%;
+    }
+
+    td {
+        font-size: 0.9rem;
+
+    }
+
+    table {
+        margin: 0 2%
+    }
+
+    
+
+    /* PATROCÍNIO */
+
+.patrocinador{
+    font-size: 2rem;
+    margin-top: 17%;
+}
+
+h2{
+    font-size: 1.7rem;
+
+}
+
+}
